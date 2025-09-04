@@ -25,7 +25,7 @@ The goal: **Portfolio-ready projects + AZ-900 certification + solid coding skill
 - ⬜ Attempt AZ-900 exam, peek into AZ-104   
 - ⬜ Solve 50+ DSA problems (Recursion, Trees, Graphs)    
 
----
+--
 
 ## ✅ Weekly Checklist  
 
