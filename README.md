@@ -50,11 +50,71 @@ The goal: **Portfolio-ready projects + AZ-900 certification + solid coding skill
 - [ ] Revise AZ-900 key topics   
 - [ ] Mini Project: Contact Manager API (Spring Boot + H2 DB)    
 
-... *(continue similarly for all weeks up to Week 12)*    
+### Week 5
+- [ ] Learn Spring Boot + JPA + Hibernate  
+- [ ] Deploy a sample app to Azure App Service  
+- [ ] Mini Project: E-commerce API – Products only  
+- [ ] DSA: Arrays intro (Pinnacle Program)  
 
 ---
 
-## 💻 Projects  
+### Week 6
+- [ ] Learn Spring Boot Authentication basics  
+- [ ] Explore Azure SQL Database  
+- [ ] Mini Project: E-commerce API – Users + Auth  
+- [ ] DSA: Strings  
+
+---
+
+### Week 7
+- [ ] Learn Spring Boot Security + Testing  
+- [ ] Connect Spring Boot app with Azure SQL DB  
+- [ ] Mini Project: E-commerce API – Orders + Integration with DB  
+- [ ] DSA: Linked Lists  
+
+---
+
+### Week 8
+- [ ] Refactor + Document API  
+- [ ] Deploy API on Azure App Service  
+- [ ] Mini Project: Finalize E-commerce API with README + diagrams  
+- [ ] DSA: Stacks & Queues  
+
+---
+
+### Week 9
+- [ ] Learn Spring Boot Microservices basics (Amigoscode / Java Brains)  
+- [ ] Explore Azure Blob Storage  
+- [ ] Mini Project: Expense Tracker with Azure Blob Storage for receipts  
+- [ ] DSA: Recursion  
+
+---
+
+### Week 10
+- [ ] Learn Spring Boot WebSockets  
+- [ ] Explore Azure Functions intro  
+- [ ] Mini Project: Chat App (Spring Boot + WebSockets + Azure Functions)  
+- [ ] DSA: Trees  
+
+---
+
+### Week 11
+- [ ] Refactor + Add testing for Spring Boot apps  
+- [ ] Deploy Chat App to Azure  
+- [ ] Mini Project: Finalize Chat App  
+- [ ] DSA: Graphs basics  
+
+---
+
+### Week 12
+- [ ] Polish Final Project → Deploy + GitHub README (diagrams, docs)  
+- [ ] Revise AZ-900 + peek at AZ-104  
+- [ ] Mini Project: Capstone project (Expense Tracker OR Chat App OR similar)  
+- [ ] DSA: Solve 50 problems total  
+
+---
+
+## 💻 Projects Included 
 
 - **Mini Projects**     
   - Week 1: Calculator CLI (Java)  
@@ -88,7 +148,7 @@ The goal: **Portfolio-ready projects + AZ-900 certification + solid coding skill
 ---
 
 ## 📖 Notes  
-All weekly notes will be inside `/week-XX/notes.md`.   
+All weekly notes will be inside `/week-XX/notes.md` or a PDF of the same would be uploaded weekly.   
 Each project will have a dedicated folder with:   
 - `README.md` (description, features, setup, screenshots)   
 - `src/` (source code)    
