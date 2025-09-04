@@ -35,20 +35,28 @@ The goal: **Portfolio-ready projects + AZ-900 certification + solid coding skill
 - [ ] Mini Project: Calculator CLI in Java   
 - [ ] Notes in `week-01/notes.md`    
 
+---
+
 ### Week 2  
 - [ ] Java OOP + Exception Handling – CodeStudio   
 - [ ] Do 1 AZ-900 lab on Microsoft Learn   
 - [ ] Mini Project: Student Grade Manager (Java OOP)    
+
+---
 
 ### Week 3  
 - [ ] Watch Amigoscode Spring Boot crash course   
 - [ ] AZ-900 videos (20 mins/day)   
 - [ ] Mini Project: To-Do REST API (Spring Boot + H2 DB)    
 
+---
+
 ### Week 4  
 - [ ] Learn Spring Boot + JPA basics   
 - [ ] Revise AZ-900 key topics   
 - [ ] Mini Project: Contact Manager API (Spring Boot + H2 DB)    
+
+---
 
 ### Week 5
 - [ ] Learn Spring Boot + JPA + Hibernate  
