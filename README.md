@@ -30,7 +30,7 @@ The goal: **Portfolio-ready projects + AZ-900 certification + solid coding skill
 ## ✅ Weekly Checklist  
 
 ### Week 1  
-- [ ] Learn Java basics (Variables, Loops, OOP) – CodeStudio   
+- [.] Learn Java basics (Variables, Loops, OOP) – CodeStudio   
 - [ ] Watch John Savill AZ-900 (2–3 videos)   
 - [ ] Mini Project: Calculator CLI in Java   
 - [ ] Notes in `week-01/notes.md`    
