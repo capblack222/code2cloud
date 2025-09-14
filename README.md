@@ -10,7 +10,7 @@ The goal: **Portfolio-ready projects + AZ-900 certification + solid coding skill
 
 ### Phase 1 (Sept → mid-Oct) → *Java + Spring Boot basics + AZ-900 intro*  
 - ✅ Java basics (CodeStudio)   
-- ✅ Spring Boot crash course (Amigoscode)   
+- ⬜ Spring Boot crash course (Amigoscode)   
 - ⬜ Build To-Do API + Contact Manager API   
 - ⬜ Prepare for AZ-900 exam    
 
@@ -32,13 +32,12 @@ The goal: **Portfolio-ready projects + AZ-900 certification + solid coding skill
 ### Week 1  
 - [x] Learn Java basics (Variables, Loops, OOP) – CodeStudio   
 - [ ] Watch John Savill AZ-900 (2–3 videos)   
-- [ ] Mini Project: Calculator CLI in Java   
-- [ ] Notes in `week-01/notes.md`    
+- [ ] Mini Project: Calculator CLI in Java 
 
 ---
 
 ### Week 2  
-- [ ] Java OOP + Exception Handling – CodeStudio   
+- [x] Java OOP + Exception Handling – CodeStudio   
 - [ ] Do 1 AZ-900 lab on Microsoft Learn   
 - [ ] Mini Project: Student Grade Manager (Java OOP)    
 
