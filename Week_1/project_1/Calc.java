@@ -104,3 +104,58 @@ public class Calc {
         sc.close();
     }
 }
+
+/*
+ * ⚠️ Areas to Improve
+
+Constructor misuse:
+
+You wrote void Calc(int a, int b) → that’s not a constructor, it’s just a method (constructors don’t have a return type).
+
+Should be:
+
+Calc(int a, int b) { ... }
+Calc(int a) { ... }
+
+
+Or even better, drop these and just use setValues() methods for clarity.
+
+Division edge case:
+
+No handling for division by zero → program will crash.
+
+Fix with:
+
+if (n2 == 0) {
+    System.out.println("Error: Division by zero not allowed");
+    return;
+}
+
+
+Code structure:
+
+The Calc class mixes business logic and printing results.
+
+Cleaner design: Calc should only compute and return the result, and main should handle printing.
+
+Unused import:
+
+import java.nio.channels.Pipe.SourceChannel; is not needed.
+
+Variable naming:
+
+n1, n2, res → okay for practice, but firstNumber, secondNumber, result are more readable.
+
+Scanner choice reuse:
+
+Using choice both for menu selection and continue prompt → confusing. Better to use two variables.
+
+⭐ Suggested Additions
+
+Add error handling for invalid inputs (non-numbers) using try-catch.
+
+Add continuous calculation mode (use last result as next n1).
+
+Maybe implement a command history list to store results.
+
+ */
