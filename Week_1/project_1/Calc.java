@@ -13,51 +13,64 @@ public class Calc {
     void printRes(){
         System.out.println("Result is: " + res);
     }
-    void add(){
+    int add(){
         res = firstNumber + secondNumber;
-        System.out.println("Addition is: " + res);
+        printRes();
+        return res;
     }
-    void sub(){
+    int sub(){
         res = firstNumber - secondNumber;
-        System.out.println("Subtraction is: " + res);
+        printRes();
+        return res;
     }
-    void mul(){
+    int mul(){
         res = firstNumber * secondNumber;
-        System.out.println("Multiplication is: " + res);
+        printRes();
+        return res;
     }
-    void div(){ 
+    int div(){ 
         if (secondNumber == 0) {
-            System.out.println("Error: Division by zero is not allowed!");
-            return;
+            System.out.println("\nError: Division by zero is not allowed!\n");
+            return -1;
         }
         res = firstNumber / secondNumber;
-        System.out.println("Division is: " + res);
+        printRes();
+        return res;
     }
-    void square(){
+    int square(){
         res = firstNumber * firstNumber;
-        System.out.println("Square is: " + res);
+        printRes();
+        return res;
     }
-    void cube(){
+    int cube(){
         res = firstNumber * firstNumber * firstNumber;
-        System.out.println("Cube is: " + res);
+        printRes();
+        return res;
     }
-    void mod(){
+    int mod(){
         res = firstNumber % secondNumber;
-        System.out.println("Modulus is: " + res);
+        printRes();
+        return res;
     }
-    void pow(){
+    int pow(){
         res = (int) Math.pow(firstNumber, secondNumber);
-        System.out.println("Power is: " + res);
+        printRes();
+        return res;
     }
-    void sqrt(){
+    int sqrt(){
+        if (firstNumber < 0) {
+            System.out.println("\nError: Square root of negative number is not defined in real numbers!\n");
+            return -1;
+        }
         res = (int) Math.sqrt(firstNumber);
-        System.out.println("Square Root is: " + res);
+        printRes();
+        return res;
     }
 
     public static void main(String[] args) {
         System.out.println("\n\nHello, There! \nWelcome to the Calculator Program");
         Scanner sc = new Scanner(System.in);
-        int input1, input2, operationChoice, continueChoice = 0;
+        int input1, input2, result, operationChoice, continueChoice = 0;
         do {
             // Taking operation choice
             System.out.println("\n--------------------------------------------------");
@@ -72,7 +85,7 @@ public class Calc {
             }
 
             // Taking inputs based on operation
-            if(operationChoice == 10) {
+            if(operationChoice == 11) {
                 break;
             } else {
                 if (operationChoice >= 1 && operationChoice <= 4 || operationChoice == 7 || operationChoice == 8) {
@@ -88,12 +101,17 @@ public class Calc {
 
                     Calc obj = new Calc(input1, input2);
                      switch (operationChoice) {
-                        case 1: obj.add(); break;
-                        case 2: obj.sub(); break;
-                        case 3: obj.mul(); break;
-                        case 4: obj.div(); break;
-                        case 7: obj.mod(); break;
-                        case 8: obj.pow(); break;
+                        case 1: result = obj.add(); break;
+                        case 2: result = obj.sub(); break;
+                        case 3: result = obj.mul(); break;
+                        case 4: result = obj.div(); 
+                                if (result == -1) {
+                                    System.out.println("Please try again with valid inputs.\n");
+                                    continue;
+                                }
+                                break;
+                        case 7: result = obj.mod(); break;
+                        case 8: result = obj.pow(); break;
                     }
                 } else if (operationChoice == 5 || operationChoice == 6 || operationChoice == 9) {
                     System.out.print("Enter the number: ");
@@ -107,10 +125,17 @@ public class Calc {
 
                     Calc obj = new Calc(input1);
                     switch (operationChoice) {
-                        case 5: obj.square(); break;
-                        case 6: obj.cube(); break;
-                        case 9: obj.sqrt(); break;
+                        case 5: result = obj.square(); break;
+                        case 6: result = obj.cube(); break;
+                        case 9: result = obj.sqrt();
+                                if (result == -1) {
+                                    System.out.println("Please try again with valid input.\n");
+                                    continue;
+                                }
+                                break;
                     }
+                } else if (operationChoice == 10) {
+                    System.out.println("History feature is under development.\n");
                 } else {
                     System.out.println("Invalid choice! Please try again. \n");
                     continue;
@@ -131,17 +156,121 @@ public class Calc {
         sc.close();
         System.out.println("\n\nAdios .... See you later!");
         System.out.println("\n--------------------------------------------------\n");
-        
+
     }
 }
+
+
 /*
 
-⭐ Suggested Additions
+✅ Calculator Project Improvement Checklist
 
-Add error handling for invalid inputs (non-numbers) using try-catch.
+A. Code Structure & Organization
 
-Add continuous calculation mode (use last result as next n1).
+ Move menu display to a separate method
 
-Maybe implement a command history list to store results.
+ Move input-taking logic to a separate method
+
+ Move operation execution to its own method
+
+ Separate handlers for:
+
+ two-input operations
+
+ single-input operations
+
+ history feature
+
+ Keep main() small and readable
+
+B. Input Validation
+
+ Create a general method like getValidatedInt(prompt)
+
+ Handle invalid numeric inputs
+
+ Handle division by zero
+
+ Handle negative inputs for sqrt, factorial, etc.
+
+ Validate menu choices (1–11)
+
+C. Error Handling
+
+ Print meaningful error messages
+
+ Retry input when user makes a mistake
+
+ Avoid program crashes by catching exceptions
+
+D. History Feature
+
+ Store performed operations
+
+ Include:
+
+ operation name
+
+ input values
+
+ result
+
+ timestamp (optional)
+
+ Display history when chosen
+
+ Limit history size (optional)
+
+E. File Handling (Optional but great improvement)
+
+ Save history to a file on exit
+
+ Load history from file on startup
+
+ Use text/CSV/JSON format
+
+F. UI/Experience Enhancements
+
+ Clear screen between operations (if supported)
+
+ More user-friendly messages
+
+ Display results in a clean formatted way
+
+ Add a small pause OR animation (optional)
+
+G. Additional Operations (Optional Upgrades)
+
+ Factorial
+
+ Logarithm (log, ln)
+
+ Trigonometric functions
+
+ Percentage calculation
+
+ Absolute value
+
+ Exponent with double values
+
+H. OOP Improvements
+
+ Consider making operations static
+
+ Or use a single Calc object instead of creating a new one every time
+
+ Or use an interface Operation and individual operation classes (advanced)
+
+I. Code Quality Enhancements
+
+ Add comments explaining tricky logic
+
+ Use meaningful variable names
+
+ Avoid repetition (DRY principle)
+
+ Use constants for menu values if needed
+
+ Use enums for operations (optional but clean)
 
  */
